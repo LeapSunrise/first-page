@@ -41,7 +41,7 @@ aside ul li {
     color: #fff;
     display: block;
     margin-top: 20px;
-    transition: all .5s ease;
+    transition: transform .5s ease;
 }
 aside ul li:hover, aside ul a:hover{
     color: #FF00FF;
@@ -51,3 +51,13 @@ aside ul li:hover, aside ul a:hover{
 aside a {
     text-decoration: none;
 }
+
+main .features{
+    float: left;
+    margin-top:50px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 40px auto}
