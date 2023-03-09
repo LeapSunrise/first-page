@@ -17,9 +17,9 @@
         <span class="logo">Rostsex</span>
         <h3>Navigation</h3>
         <ul>
-            <a href=""><li><i class="fa-solid fa-house"></i> Main page</li></a>
-            <a href=""><li><i class="fa-solid fa-user"></i> About us</li></a>
-            <a href=""><li><i class="fa-solid fa-phone"></i> Contacts</li></a>
+            <a href="{% url 'homepage' %}"><li><i class="fa-solid fa-house"></i> Main page</li></a>
+            <a href="{% url 'aboutpage' %}"><li><i class="fa-solid fa-user"></i> About us</li></a>
+            <a href="{% url 'contactspage' %}"><li><i class="fa-solid fa-phone"></i> Contacts</li></a>
         </ul>
     </aside>
     <main>
