@@ -18,3 +18,6 @@ def about(request):
 
 def contacts(request):
     return render(request, 'main_site/contacts.html')
+
+def website_under_construction(request):
+    return render(request, 'main_site/unavailable_page.html')
