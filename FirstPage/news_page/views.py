@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .models import Articles
 
 
 def news_page(request):
-    return render(request, 'news_page/news_page.html')
+    news = Articles.objects.all()
+    return render(request, 'news_page/news_page.html', {'news': news})
 
 
 def website_under_construction(request):

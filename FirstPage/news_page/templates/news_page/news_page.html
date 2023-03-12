@@ -5,7 +5,12 @@
 {% block content  %}
     <div class="features">
         <h1>News</h1>
-        <p>"Here will be placed NEWS"</p>
-        <button class="btn btn-warning">News Button</button>
+
+        {% for el in news %}
+            <div class="allert alert-warning">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.anons  }}</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

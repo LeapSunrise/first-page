@@ -1,16 +1,16 @@
 body {
-    background: #FFFFE0;
+    background: #9e6ba4;
 
 }
 
 aside {
     float: left;
-    background: #7B68EE;
+    background: #baf6ac;
     width: 20%;
     padding: 2%;
     height: 100vh;
-    color: #fff;
-    border-right: 5px solid #696969;
+    color: #000000;
+    border-right: 5px solid #5e5e5e;
 
 }
 
@@ -37,14 +37,16 @@ aside h3 {
 aside ul {
     list-style: none;
 }
+
 aside ul li {
-    color: #fff;
+    color: #003dd9;
     display: block;
     margin-top: 20px;
     transition: transform .5s ease;
 }
+
 aside ul li:hover, aside ul a:hover{
-    color: #FF00FF;
+    color: #d905cb;
     transform: scale(1.05);
 }
 
