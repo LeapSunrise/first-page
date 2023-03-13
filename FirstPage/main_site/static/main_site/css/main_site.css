@@ -1,25 +1,25 @@
+/*main background*/
 body {
     background: #9e6ba4;
-
 }
-
+/*left bar*/
 aside {
     float: left;
     background: #baf6ac;
     width: 20%;
-    padding: 2%;
+    padding: 2.5%;
     height: 100vh;
     color: #000000;
     border-right: 5px solid #5e5e5e;
 
 }
-
+/*capybara*/
 aside img {
     width: 200px;
     height: 80px;
     float: left;
 }
-
+/*rostsex*/
 aside .logo {
     font-size: 40px;
     margin-left: 10px;
@@ -27,39 +27,53 @@ aside .logo {
     position: relative;
     top: -5px;
 }
-
+/*navigation title*/
 aside h3 {
-    margin-top: 70px;
-    font-size: 25px;
+    margin-top: 50px;
+    font-size: 28px;
 
 }
-
+/*dotskiller*/
 aside ul {
     list-style: none;
 }
-
+/*navigation bar*/
 aside ul li {
     color: #003dd9;
     display: block;
     margin-top: 20px;
     transition: transform .5s ease;
 }
-
+/*under cursor appearance*/
 aside ul li:hover, aside ul a:hover{
     color: #d905cb;
     transform: scale(1.05);
 }
-
+/*hz*/
 aside a {
     text-decoration: none;
 }
 
 main .features{
     float: left;
+    color: #1c1a1a;
     margin-top:50px;
     text-align: center;
     width: 75%;
 }
 
-main .features h1 {font-size: 50px;}
-main .features p {max-width: 400px; margin: 40px auto}
+main .features h1 {
+    font-size: 50px;
+}
+
+main .features p {
+    max-width: 400px; margin: 40px auto
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: center;
+}
