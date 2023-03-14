@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Articles
 from .forms import ArticlesForm
+
+
 # DO NOT ADD "/" BEFORE NEWS_PAGE PATH
 
 def news_page(request):
@@ -9,10 +11,20 @@ def news_page(request):
 
 
 def create(request):
+    error = ""
+    if request.method == 'POST':
+        form = ArticlesForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('homepage')
+        else:
+            error = 'Invalid form'
+
     form = ArticlesForm()
 
     data = {
-        'form': form
+        'form': form,
+        'error': error
     }
 
     return render(request, 'news_page/create.html', data)

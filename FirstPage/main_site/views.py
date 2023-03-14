@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def index(request):
@@ -17,7 +17,7 @@ def about(request):
     return render(request, 'main_site/about.html')
 
 def contacts(request):
-    return render(request, 'main_site/contacts.html')
+    return render(request, 'main_site/unavailable_page.html')
 
 def website_under_construction(request):
     return render(request, 'main_site/unavailable_page.html')
