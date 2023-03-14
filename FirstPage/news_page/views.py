@@ -16,7 +16,7 @@ def create(request):
         form = ArticlesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('homepage')
+            return redirect('news_page')
         else:
             error = 'Invalid form'
 
