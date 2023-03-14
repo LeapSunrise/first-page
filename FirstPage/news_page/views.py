@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Articles
-
+from .forms import ArticlesForm
 # DO NOT ADD "/" BEFORE NEWS_PAGE PATH
 
 def news_page(request):
@@ -9,7 +9,13 @@ def news_page(request):
 
 
 def create(request):
-    return render(request, 'news_page/create.html')
+    form = ArticlesForm()
+
+    data = {
+        'form': form
+    }
+
+    return render(request, 'news_page/create.html', data)
 
 
 def website_under_construction(request):
