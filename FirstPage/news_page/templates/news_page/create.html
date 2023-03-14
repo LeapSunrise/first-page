@@ -1,0 +1,17 @@
+{% extends 'main_site/layout.html' %}
+
+{% block title %}Adding article form{% endblock %}
+
+{% block content  %}
+    <div class="features">
+        <h1>Adding article form</h1>
+        <form method="post" action="">
+          <input type="text" placeholder="Article name" class="form-control" ><br>
+          <input type="text" placeholder="Article anons" class="form-control" ><br>
+          <textarea class="form-control" placeholder="Article text"></textarea><br>
+          <input type="date" class="form-control" ><br>
+          <input type="time" class="form-control" ><br>
+          <button class="btn btn-success" type="submit">Add an article</button>
+        </form>
+    </div>
+{% endblock %}
