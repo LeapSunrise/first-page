@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Articles
 from .forms import ArticlesForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 # DO NOT ADD "/" BEFORE NEWS_PAGE PATH
 
@@ -18,6 +18,18 @@ class NewsDetailView(DetailView):
     template_name = 'news_page/details_view.html'
     context_object_name = 'article'
 
+
+class NewsUpdateView(UpdateView):
+    model = Articles
+    template_name = 'news_page/create.html'
+
+    form_class = ArticlesForm
+
+
+class NewsDeleteView(DeleteView):
+    model = Articles
+    success_url = '/news_page'
+    template_name = 'news_page/news_delete.html'
 
 
 def create(request):
