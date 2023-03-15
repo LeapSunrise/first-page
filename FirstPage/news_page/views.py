@@ -1,13 +1,23 @@
 from django.shortcuts import render, redirect
 from .models import Articles
 from .forms import ArticlesForm
-
+from django.views.generic import DetailView
 
 # DO NOT ADD "/" BEFORE NEWS_PAGE PATH
+
+
+
 
 def news_page(request):
     news = Articles.objects.order_by('-date')
     return render(request, 'news_page/news_page.html', {'news': news})
+
+
+class NewsDetailView(DetailView):
+    model = Articles
+    template_name = 'news_page/details_view.html'
+    context_object_name = 'article'
+
 
 
 def create(request):
